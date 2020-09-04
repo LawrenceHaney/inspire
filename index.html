@@ -16,7 +16,13 @@
         <div id="app" class="row">
             <div class="col-8" id="quote"></div>
             <div class="col-12" id="clock"></div>
-            <div class="col-12" id="task"></div>
+            <div class="col-4 card">
+                <ul id="task"></ul>
+                <form onsubmit="app.todoController.addTodo(event)">
+                <textarea type= "text" name="description" id="todo-des" cols="30" rows="3"></textarea> 
+                <button class="fa fa-plus-square" aria-hidden="true" type="submit"></i>
+                </form>
+            </div>
             <div class="col-4" id="weather"></div>
         </div>
     </main>

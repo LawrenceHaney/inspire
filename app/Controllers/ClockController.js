@@ -1,7 +1,8 @@
 import clockService from "../Services/ClockService.js";
 
 function _drawClock(){
-  document.getElementById("clock").innerHTML = clockService.runClock()
+  let time = clockService.runClock()
+document.getElementById("clock").innerHTML = `<h1 class = "text-light">${time}</h1>`
 
 }
 export default class ClockController {
