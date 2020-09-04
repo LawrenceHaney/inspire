@@ -1,0 +1,9 @@
+
+add button to toggle F/C in weather
+possably using the var != Var toggle
+
+add counter to incompleate task in taskmaster
+
+add author on hover via css for quote
+  possabling toggling hidden via css
+

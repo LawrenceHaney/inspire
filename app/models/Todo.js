@@ -6,6 +6,11 @@ export default class Todo {
   }
 
   get Template(){
-  return `<li>${this.description}</li><i class="fa fa-trash text-right" aria-hidden="true" onclick="app.todoController.removeTodo('${this._id}')"></i>`
+  return `<li>
+  <input type="checkbox" ${this.completed} onclick="app.todoController.toggleTodoStatus('${this._id}')">
+  ${this.description}
+  <i class="fa fa-trash text-right" aria-hidden="true" onclick="app.todoController.removeTodo('${this._id}')"></i>
+  </li>
+  `
   }
 }
