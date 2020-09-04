@@ -10695,6 +10695,20 @@ body {
 
 main {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+#app{
+  flex-grow: 1;
+}
+.hide{
+  display: none;
+}
+.quote:hover + .hide{
+  display: block;
 }
 
+.text-shadow{
+  text-shadow: .05em .05em var(--dark);
+}
 /*# sourceMappingURL=main.css.map */

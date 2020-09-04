@@ -13,17 +13,17 @@
 
 <body id="body">
     <main class= "container-fluid">
-        <div id="app" class="row">
-            <div class="col-8" id="quote"></div>
-            <div class="col-12" id="clock"></div>
-            <div class="col-4 card">
-                <ul id="task"></ul>
-                <form onsubmit="app.todoController.addTodo(event)">
-                <textarea type= "text" name="description" id="todo-des" cols="30" rows="3"></textarea> 
-                <button class="fa fa-plus-square" aria-hidden="true" type="submit"></i>
-                </form>
-            </div>
-            <div class="col-4" id="weather"></div>
+        <div id="app" class="row justify-content-between text-center">
+            <div class="col-12 align-self-center" id="clock"></div>
+            <div class="col-12 align-self-end p-5" id="quote"></div>
+            <div class="col-2 align-self-end m-2" id="weather"></div>
+                <div class="col-2 card align-self-end m-2">
+                    <ul id="task"></ul>
+                    <form onsubmit="app.todoController.addTodo(event)">
+                        <textarea type= "text" name="description" id="todo-des" cols="30" rows="3"></textarea> 
+                        <button class="fa fa-plus-square" aria-hidden="true" type="submit"></i>
+                        </form>
+                    </div>
         </div>
     </main>
     <footer class="container-fluid bg-transparent text-light">
