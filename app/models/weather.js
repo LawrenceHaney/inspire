@@ -10,5 +10,27 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.fahrenheit = this.ktoF(this.kelvin)
+    this.celsius = this.ktoC(this.kelvin)
+    this.condtions = data.weather
   }
+
+ktoF(K){
+  let res = Math.floor((K * 1.8) - 459.67)
+  return res
+}  
+
+ktoC(K){
+  return Math.floor(K-273.15)
+}
+get Template(){
+  return `
+  <div class="card row">
+            <div>${this.city}</div>
+            <div>${this.fahrenheit}</div>
+            <div>${this.condtions[2]}</div>
+        </div>
+  `
+}
+
 }

@@ -1,8 +1,8 @@
 import { ProxyState } from "../AppState.js";
 import { api } from "../Services/AxiosService.js";
 
-// TODO you will need to change 'YOURNAME' to your actual name or all requests will be rejected
-let url = 'YOURNAME/todos/'
+// DONE you will need to change 'YOURNAME' to your actual name or all requests will be rejected
+let url = 'lhaney/todos/'
 
 
 class TodoService {
