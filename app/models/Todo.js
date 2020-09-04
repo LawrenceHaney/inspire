@@ -1,11 +1,11 @@
 export default class Todo {
-  constructor({ id, description, compleated }) {
-    this.id = id;
+  constructor({ _id, description, compleated }) {
+    this._id = _id;
     this.description = description
     this.completed = compleated || false
   }
 
   get Template(){
-  return `<li>${this.description}</li><i class="fa fa-trash text-right" aria-hidden="true" onclick="app.todosController.removeTodo('${this.id}')></i>`
+  return `<li>${this.description}</li><i class="fa fa-trash text-right" aria-hidden="true" onclick="app.todoController.removeTodo('${this._id}')"></i>`
   }
 }
