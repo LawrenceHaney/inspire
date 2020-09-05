@@ -12,7 +12,8 @@ export default class Weather {
     this.kelvin = data.main.temp
     this.fahrenheit = this.ktoF(this.kelvin)
     this.celsius = this.ktoC(this.kelvin)
-    this.condtions = data.weather
+    this.condtions = data.weather[0].description
+    this.temptoggle = false
   }
 
 ktoF(K){
@@ -24,13 +25,23 @@ ktoC(K){
   return Math.floor(K-273.15)
 }
 get Template(){
+  if(this.temptoggle == false){
+
+    return `
+    <div class="card row">
+    <div>${this.city}</div>
+    <div onclick="app.weatherController.toggleTemp()">${this.fahrenheit} F</div>
+    <div>${this.condtions}</div>
+    </div>
+    `
+  }
   return `
-  <div class="card row">
-            <div>${this.city}</div>
-            <div>${this.fahrenheit}</div>
-            <div>${this.condtions[2]}</div>
-        </div>
-  `
+    <div class="card row">
+    <div>${this.city}</div>
+    <div onclick="app.weatherController.toggleTemp()">${this.celsius} C</div>
+    <div>${this.condtions}</div>
+    </div>
+    `
 }
 
 }

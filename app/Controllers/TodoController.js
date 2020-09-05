@@ -3,7 +3,9 @@ import { ProxyState } from "../AppState.js";
 
 //Done Create the draw function
 function _drawTodos() { 
-  let template = ''
+  let count = 0
+  ProxyState.todos.forEach(t => {if(t.completed == false) count ++})
+  let template = `<h4> tasks remaining ${count} <h4/>`
   ProxyState.todos.forEach(t => template += t.Template)
   document.getElementById("task").innerHTML= template
 }
@@ -44,6 +46,7 @@ export default class TodoController {
     } catch (error) {
       console.error(error)
     }
+    _drawTodos()
   }
 
   /**
