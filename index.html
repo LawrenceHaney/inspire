@@ -18,10 +18,10 @@
             <div class="col-12 align-self-end p-5" id="quote"></div>
             <div class="col-2 align-self-end m-2" id="weather"></div>
                 <div class="col-2 card align-self-end m-2">
-                    <ul id="task"></ul>
-                    <form onsubmit="app.todoController.addTodo(event)">
-                        <textarea type= "text" name="description" id="todo-des" cols="30" rows="3"></textarea> 
-                        <button class="fa fa-plus-square" aria-hidden="true" type="submit"></i>
+                    <ul id="task" class="list-unstyled"></ul>
+                    <form class="form-group row justify-content-around" onsubmit="app.todoController.addTodo(event)">
+                        <textarea class="col-8" type= "text" name="description" id="todo-des" cols="30" rows="3"></textarea> 
+                        <button class="col-3 btn btn-outline-primary fa fa-plus-square" aria-hidden="true" type="submit"></i>
                         </form>
                     </div>
         </div>

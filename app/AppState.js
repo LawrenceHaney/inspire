@@ -3,7 +3,9 @@ import Weather from "./Models/Weather.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
+
 // DONE you will want to add all your other data to the AppState
+_loadData
 class AppState extends EventEmitter {
   /** @type {Todo[]} */
   todos = []

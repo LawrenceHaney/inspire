@@ -8,19 +8,17 @@ export default class Todo {
   get Template(){
     if(this.completed == false){
 
-      return `<li>
-      <input type="checkbox" onclick="app.todoController.toggleTodoStatus('${this._id}')">
-      <p class="text-right">${this.description}<p/><span>
-      <i class="fa fa-trash text-right" aria-hidden="true" onclick="app.todoController.removeTodo('${this._id}')"></i>
-      </span>
+      return `<li class="row">
+      <input type="checkbox" onclick="app.todoController.toggleTodoStatus('${this._id}')" class="col-3">
+      <p class="col-6">${this.description}</p>
+      <i class="fa fa-trash col-3" aria-hidden="true" onclick="app.todoController.removeTodo('${this._id}')"></i>
       </li>
       `
     }
-    return `<li>
-      <input type="checkbox" onclick="app.todoController.toggleTodoStatus('${this._id}')" checked>
-      <s class="text-right">${this.description}</s><span>
-      <i class="fa fa-trash text-right" aria-hidden="true" onclick="app.todoController.removeTodo('${this._id}')"></i>
-      </span>
+    return `<li class="row">
+      <input type="checkbox" onclick="app.todoController.toggleTodoStatus('${this._id}')" checked class="col-3">
+      <s class="col-6">${this.description}</s>
+      <i class="fa fa-trash col-3" aria-hidden="true" onclick="app.todoController.removeTodo('${this._id}')"></i>
       </li>
       ` 
   }

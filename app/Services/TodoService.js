@@ -28,7 +28,7 @@ class TodoService {
     }
     todo.completed = !todo.completed
 
-    let res = await api.put(url + todoId, {compleated: todo.completed});
+    await api.put(url + todoId, {compleated: todo.completed});
     //DONe how do you trigger this change
     ProxyState.todos = ProxyState.todos
   }

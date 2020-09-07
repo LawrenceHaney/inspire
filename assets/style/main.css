@@ -10701,6 +10701,10 @@ main {
 #app{
   flex-grow: 1;
 }
+
+#task{
+  list-style-type: none;
+}
 .hide{
   display: none;
 }
