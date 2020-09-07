@@ -21,21 +21,21 @@ class TodoService {
   }
 
   async toggleTodoStatus(todoId) {
-    let todo = await ProxyState.todos.find(todo => todo._id == todoId);
+    let todo = ProxyState.todos.find(t => t._id == todoId);
     //DONE Make sure that you found a todo,
     if(!todo){
       console.error("I can't find that Dave")
     }
+    console.log("this runs")
     todo.completed = !todo.completed
 
-    await api.put(url + todoId, {compleated: todo.completed});
+    let res = await api.put(`lhaney/todos/${todo._id}`, { completed: todo.completed });
     //DONe how do you trigger this change
     ProxyState.todos = ProxyState.todos
   }
 
   async removeTodo(todoId) {
     let com =`${url}${todoId}`
-    console.log(ProxyState.todos)
     await api.delete(com)
     ProxyState.todos = ProxyState.todos.filter(i => i._id != todoId)
   }

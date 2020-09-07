@@ -13,12 +13,13 @@ function _drawTodos() {
 export default class TodoController {
   constructor() {
     //DONE Remember to register your subscribers
-    todoService.getTodos();
+    this.getTodos();
     ProxyState.on("todos", _drawTodos)
   }
 
   getTodos() {
     try {
+      console.log("hi")
       todoService.getTodos()
     } catch (error) {
       console.error(error)
