@@ -7,8 +7,11 @@ export default class Quote {
   }
 
   get Template(){
-return `<h1 class="text-center text-light text-shadow quote">${this.body}</h1>
-        <h6 class="hide text-center text-light text-shadow">${this.author}</h6>`
+return `<div class ="row text-center">
+        <h1 class="text-center text-light text-shadow quote col-12"> ${this.body} </h1>
+        <h6 class="hide text-center text-light text-shadow col-12"> ~ ${this.author}</h6>
+        </div>
+        `
   }
 
 }

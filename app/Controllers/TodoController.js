@@ -5,7 +5,7 @@ import { ProxyState } from "../AppState.js";
 function _drawTodos() { 
   let count = 0
   ProxyState.todos.forEach(t => {if(t.completed == false) count ++})
-  let template = `<h4> tasks remaining ${count} <h4/>`
+  let template = `<h4 class="m-2 text-light text-shadow"> Tasks remaining: ${count} <h4/>`
   ProxyState.todos.forEach(t => template += t.Template)
   document.getElementById("task").innerHTML= template
 }

@@ -12,15 +12,15 @@
 </head>
 
 <body id="body">
-    <main class= "container-fluid">
+    <main class= "container-fluid grow">
         <div id="app" class="row justify-content-between text-center">
-            <div class="col-12 align-self-center" id="clock"></div>
-            <div class="col-12 align-self-end p-5" id="quote"></div>
+            <div class="col-12 align-self-center grow" id="clock"></div>
+            <div class="col-12 align-self-end justify-content-around p-5" id="quote"></div>
             <div class="col-2 align-self-end m-2" id="weather"></div>
-                <div class="col-2 card align-self-end m-2">
+                <div class="col-2 card float-box align-self-end m-2 p-2">
                     <ul id="task" class="list-unstyled"></ul>
                     <form class="form-group row justify-content-around" onsubmit="app.todoController.addTodo(event)">
-                        <textarea class="col-8" type= "text" name="description" id="todo-des" cols="30" rows="3"></textarea> 
+                        <textarea class="col-8 float-box text-light text-shadow" type= "text" name="description" id="todo-des" cols="30" rows="3"></textarea> 
                         <button class="col-3 btn btn-outline-primary fa fa-plus-square" aria-hidden="true" type="submit"></i>
                         </form>
                     </div>
@@ -29,8 +29,8 @@
     <footer class="container-fluid bg-transparent text-light">
         <div class="row text-center">
             <div class="col">
-                <h6 class="text-light text-shadow">Checkpoint 4</h6>
-                <p class="text-light text-shadow"><small>So long and thanks for all the fish</small></p>
+                <h6 class="text-light font-weight-lighter text-shadow">Checkpoint 4</h6>
+                <p class="text-light font-weight-lighter font-italic text-shadow"><small>So long and thanks for all the fish</small></p>
             </div>
         </div>
     </footer>

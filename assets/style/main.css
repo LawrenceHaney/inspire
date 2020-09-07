@@ -10693,11 +10693,12 @@ body {
   background-size: cover;
 }
 
-main {
+.grow {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
+
 #app{
   flex-grow: 1;
 }
@@ -10714,5 +10715,15 @@ main {
 
 .text-shadow{
   text-shadow: .05em .05em var(--dark);
+}
+#clock{
+  min-height: 30vh;
+}
+.clock-face{
+  font-size: 10em;
+}
+.float-box{
+  background-color: rgba(245, 245, 245, 0.301);
+  box-shadow: .05em .05em rgba(0, 0, 0, 0.03);
 }
 /*# sourceMappingURL=main.css.map */

@@ -27,7 +27,7 @@ get Template(){
   if(this.temptoggle == false){
 
     return `
-    <div class="card row">
+    <div class="card row float-box text-light text-shadow">
     <div>${this.city}</div>
     <div onclick="app.weatherController.toggleTemp()">${this.fahrenheit} F</div>
     <div>${this.condtions}</div>
@@ -35,7 +35,7 @@ get Template(){
     `
   }
   return `
-    <div class="card row">
+    <div class="card row float-box text-light text-shadow">
     <div>${this.city}</div>
     <div onclick="app.weatherController.toggleTemp()">${this.celsius} C</div>
     <div>${this.condtions}</div>
