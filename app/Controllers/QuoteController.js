@@ -3,7 +3,6 @@ import quoteService from "../Services/QuoteService.js";
 
 function _drawQuote(){
   document.getElementById("quote").innerHTML = ProxyState.quote.Template
-  console.log(ProxyState.quote)
 
 }
 //TODO Create methods for constructor, and rendering the quote to the page

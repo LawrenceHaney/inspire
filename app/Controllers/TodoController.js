@@ -19,7 +19,6 @@ export default class TodoController {
 
   getTodos() {
     try {
-      console.log("hi")
       todoService.getTodos()
     } catch (error) {
       console.error(error)

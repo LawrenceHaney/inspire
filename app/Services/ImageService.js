@@ -6,7 +6,6 @@ class ImageService {
 
   async getimage(){
     let res = await api.get('images')
-    console.log(res)
     ProxyState.activeimage = res.data.url
   }
 }
