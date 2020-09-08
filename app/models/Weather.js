@@ -29,7 +29,7 @@ get Template(){
     return `
     <div class="card row float-box text-light text-shadow">
     <div>${this.city}</div>
-    <div onclick="app.weatherController.toggleTemp()">${this.fahrenheit} F</div>
+    <div class ="text-capitalize" onclick="app.weatherController.toggleTemp()">${this.fahrenheit} F</div>
     <div>${this.condtions}</div>
     </div>
     `
